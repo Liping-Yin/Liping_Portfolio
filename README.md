@@ -7,4 +7,4 @@ Repository containing portfolio of projects completed by me for academic, self l
 
 ### Data Analysis Practices
 ### Webdevelopment Practices
-   - [A Simple Frontend Dicing Game](https://github.com/icylove12/complete-javascript-course-master/tree/main/05-Guess-My-Number/starter)
+   - My study about [web development](https://github.com/icylove12/complete-javascript-course-master/tree/main/05-Guess-My-Number/starter)
