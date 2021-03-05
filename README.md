@@ -15,7 +15,8 @@ Repository containing portfolio of projects and exercises completed by me for ac
   - [Probalistic Reasoning](https://github.com/icylove12/Liping_Portfolio/blob/main/probabilistic%20reasoning.ipynb)
 
 - Projects
-  - [Machine Learning in NetSecure NIDS](https://github.com/icylove12/Liping_Portfolio/blob/main/The%20NetSecure%20NIDS/assignment.ipynb)
+  - [Machine Learning in NetSecure NIDS](https://github.com/icylove12/Liping_Portfolio/blob/main/The%20NetSecure%20NIDS/assignment.ipynb)<br>
+   Implement the Network Intrusion Detection System (NIDS) based on Machine Learing algorithm, and train the dataset. 
   - [Machine learning_ Kaggle Titanic survival prediction](https://github.com/icylove12/Liping_Portfolio/blob/main/Titanic%20Survival%20Prediction.ipynb)
 ### Web Development Practice
    - My extra study about [web development](https://github.com/icylove12/complete-javascript-course-master)
