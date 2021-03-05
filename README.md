@@ -17,16 +17,16 @@ Repository containing portfolio of projects and exercises completed by me for ac
 - Projects
   - [Machine Learning in NetSecure NIDS](https://github.com/icylove12/Liping_Portfolio/blob/main/The%20NetSecure%20NIDS/assignment.ipynb)<br>
    Implement the Network Intrusion Detection System (NIDS) based on Machine Learing algorithm given two datasets of network traffic：benign traffic and unknown traffic.Train the machine learning algorithm with benign traffic, with this trained NIDS, test the unknown traffic to determine whether the data is benign or normal.<br>
-The process of build trained NIDS: 
-1.Extract features, 
-2.Processing the data based on scaling techniques to separate features better, 
-3.Model/Parameter selection: this project uses One-Class SVM use RBF(Gaussian) kernel to define the geometric relationship between a feature vector X and  support vectors Y 4.Evaluation: test the unknown dataset after trained the NIDS with benigh dataset.
+The process of build trained NIDS:<br>
+1.Extract features. <br>
+2.Processing the data based on scaling techniques to separate features better. <br>
+3.Model/Parameter selection: this project uses One-Class SVM use RBF(Gaussian) kernel to define the geometric relationship between a feature vector X and  support vectors Y.<br> 4.Evaluation: test the unknown dataset after trained the NIDS with benigh dataset.<br>
 
   - [Machine learning_ Kaggle Titanic survival prediction](https://github.com/icylove12/Liping_Portfolio/blob/main/Titanic%20Survival%20Prediction.ipynb)<br>
-  Titanic dataset is from Kaggle, which is very famous for machine learning as a beginner. In this notebook,I study how to explore the data and how to make predictions using machine learning.This practice follow the process:
-  1.Data Import and Preprocessing 
-  2.Explor Data 
-  3.Feature Engineeing 
+  Titanic dataset is from Kaggle, which is very famous for machine learning as a beginner. In this notebook,I focus more on exploring the data by using data visualization and how to select machine learning model for colving calssification and regression problems on supervised learning.This practice follow the process:<br>
+  1.Data Import and Preprocessing<br>
+  2.Explor Data <br>
+  3.Feature Engineeing <br>
   4.Machine Learning Model Build 5.Feature Importance 6.Conclusion
 ### Web Development Practice
    - My extra study about [web development](https://github.com/icylove12/complete-javascript-course-master)
