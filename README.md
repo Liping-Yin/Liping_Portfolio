@@ -15,6 +15,6 @@ Repository containing portfolio of projects and exercises completed by me for ac
 - Projects
   - [Machine Learning in NetSecure NIDS](https://github.com/icylove12/Liping_Portfolio/blob/main/The%20NetSecure%20NIDS/assignment.ipynb)
   - [Machine learning_ Kaggle Titanic survival prediction](https://github.com/icylove12/Liping_Portfolio/blob/main/Titanic%20Survival%20Prediction.ipynb)
-### Webdevelopment Practice
+### Web Development Practice
    - My extra study about [web development](https://github.com/icylove12/complete-javascript-course-master)
    
