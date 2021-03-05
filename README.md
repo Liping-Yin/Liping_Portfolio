@@ -9,7 +9,7 @@ Repository containing portfolio of projects and exercises completed by me for ac
 - Artifitial Intelligence Basic
   - [Bayes](https://github.com/icylove12/Liping_Portfolio/blob/main/probabilistic%20reasoning.ipynb)
   - [Decision Trees](https://github.com/icylove12/Liping_Portfolio/tree/main/Decision%20Trees)
-  - [Machine Learning in NetSecure NIDS](https://github.com/icylove12/Liping_Portfolio/tree/main/The%20NetSecure%20NIDS)
+  - [Machine Learning in NetSecure NIDS](https://github.com/icylove12/Liping_Portfolio/blob/main/The%20NetSecure%20NIDS/assignment.ipynb)
   - [Markov Decision Processs](https://github.com/icylove12/Liping_Portfolio/blob/main/Markov%20Decision%20Processes.ipynb)
   - [Probalistic Reasoning](https://github.com/icylove12/Liping_Portfolio/blob/main/probabilistic%20reasoning.ipynb)
 
