@@ -8,7 +8,7 @@ Repository containing portfolio of projects and exercises completed by me for ac
 ### Data Analysis Practice
 - Artifitial Intelligence Basic
  
-  - [Decision Trees](https://github.com/icylove12/Liping_Portfolio/blob/main/Decision%20Trees/Decision_Trees.ipynb)
+  - [Decision Trees](https://github.com/icylove12/Liping_Portfolio/blob/main/decision%20trees/Week_4%20_ML_Decision_Trees.ipynb)
   - [Markov Decision Processs](https://github.com/icylove12/Liping_Portfolio/blob/main/decision%20trees/Week_4%20_ML_Decision_Trees.ipynb)
   - [Probalistic Reasoning](https://github.com/icylove12/Liping_Portfolio/blob/main/probabilistic%20reasoning.ipynb)
 
