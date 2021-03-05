@@ -6,6 +6,8 @@ Repository containing portfolio of projects and exercises completed by me for ac
   
 
 ### Data Analysis Practice
+#### Artifitial Intelligence Basic
+     - [Bayes](https://github.com/icylove12/Liping_Portfolio/blob/main/probabilistic%20reasoning.ipynb)
 - [Machine learning_ Kaggle Titanic survival prediction](https://github.com/icylove12/Liping_Portfolio/blob/main/Titanic%20Survival%20Prediction.ipynb)
 ### Webdevelopment Practice
    - My extra study about [web development](https://github.com/icylove12/complete-javascript-course-master)
