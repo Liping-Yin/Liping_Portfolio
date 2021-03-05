@@ -3,7 +3,10 @@ Repository containing portfolio of projects and exercises completed by me for ac
 
 ## Contents
   - [Data Analysis Practices](#Data-Analysis-Practice) | [Webdevelopment Practices](#Webdevelopment-Practice)
+  
 
 ### Data Analysis Practice
+- [Machine learning_ Kaggle Titanic survival prediction] (https://github.com/icylove12/Liping_Portfolio/blob/main/Titanic%20Survival%20Prediction.ipynb)
 ### Webdevelopment Practice
    - My extra study about [web development](https://github.com/icylove12/complete-javascript-course-master)
+   
