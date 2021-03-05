@@ -6,7 +6,15 @@ Repository containing portfolio of projects and exercises completed by me for ac
   
 
 ### Data Analysis Practice
-- [Machine learning_ Kaggle Titanic survival prediction](https://github.com/icylove12/Liping_Portfolio/blob/main/Titanic%20Survival%20Prediction.ipynb)
+- Artifitial Intelligence Basic
+ 
+  - [Decision Trees](https://github.com/icylove12/Liping_Portfolio/blob/main/Decision%20Trees/Decision_Trees.ipynb)
+  - [Markov Decision Processs](https://github.com/icylove12/Liping_Portfolio/blob/main/Markov%20Decision%20Processes.ipynb)
+  - [Probalistic Reasoning](https://github.com/icylove12/Liping_Portfolio/blob/main/probabilistic%20reasoning.ipynb)
+
+- Projects
+  - [Machine Learning in NetSecure NIDS](https://github.com/icylove12/Liping_Portfolio/blob/main/The%20NetSecure%20NIDS/assignment.ipynb)
+  - [Machine learning_ Kaggle Titanic survival prediction](https://github.com/icylove12/Liping_Portfolio/blob/main/Titanic%20Survival%20Prediction.ipynb)
 ### Webdevelopment Practice
    - My extra study about [web development](https://github.com/icylove12/complete-javascript-course-master)
    
