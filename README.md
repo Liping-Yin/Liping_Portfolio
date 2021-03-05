@@ -9,7 +9,7 @@ Repository containing portfolio of projects and exercises completed by me for ac
 - Artifitial Intelligence Basic
  
   - [Decision Trees](https://github.com/icylove12/Liping_Portfolio/blob/main/decision%20trees/Week_4%20_ML_Decision_Trees.ipynb)<br>
-  split dataset by decision tree which is based on entropy and information gain: write functions to calculate entropy and information gain, and functions to  get the feature that maximizes information gain and use this feature to split the dataset.
+  split dataset by decision tree which is based on entropy and information gain: write functions to calculate entropy and information gain, and functions to  get the feature that maximizes information gain and use this feature to split the dataset.Compare the Iterative Dichotomiser 3 and Sklearn decisiontreeclassifier.
   - [Markov Decision Processs](https://github.com/icylove12/Liping_Portfolio/blob/main/Markov%20Decision%20Processes.ipynb)
   - [Probalistic Reasoning](https://github.com/icylove12/Liping_Portfolio/blob/main/probabilistic%20reasoning.ipynb)
 
