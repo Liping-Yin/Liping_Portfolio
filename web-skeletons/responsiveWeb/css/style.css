@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+:root {
+  --primary-color: #047aed;
+}
 
 /* Basic setting */
 * {
@@ -25,14 +28,17 @@ h2 {
   line-height: 1.2;
   margin: 10px 0px;
 }
+p {
+  margin: 10px 0;
+}
 
 img {
   width: 100%;
 }
 
-/* Details */
+/* Navbar */
 .navbar {
-  background-color: #047aed;
+  background-color: var(--primary-color);
   color: white;
   height: 70px;
 }
@@ -50,18 +56,77 @@ img {
 .navbar a:hover {
   border-bottom: 2px solid white;
 }
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  overflow: auto;
-  padding: 0 40px;
+
+/* Showcase */
+.showcase {
+  height: 400px;
+  background-color: var(--primary-color);
+  color: white;
+  position: relative;
+}
+.showcase h1 {
+  font-size: 40px;
+}
+.showcase p {
+  margin: 20px 0;
+}
+.showcase .grid {
+  grid-template-columns: 55% 45%;
+  gap: 30px;
+  overflow: visible;
 }
 
-.flex {
-  display: flex;
-  justify-content: center; /* pertains the main axis/direction*/
-  align-items: center; /*pertains the cross direction*/
-  height: 100%;
+.showcase-form {
+  position: relative;
+  top: 60px;
+  height: 350px;
+  width: 400px;
+  padding: 40px;
+  z-index: 100;
+  justify-self: flex-end;
 }
-.nav {
+.showcase-form .form-control {
+  margin: 30px 0;
+}
+.showcase-form input[type="text"],
+.showcase-form input[type="email"] {
+  border: 0;
+  border-bottom: 1px solid #b4becb;
+  width: 100%;
+  padding: 3px;
+  font-size: 16px;
+}
+.showcase-form input:focus {
+  outline: none;
+}
+
+.showcase::before,
+.showcase::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  background: #fff;
+  /* check different version of browser */
+  transform: skewY(-3deg);
+  -webkit-transform: skewY(-3deg);
+  -moz-transform: skewY(-3deg);
+  -ms-grid-column-align: skewY(-3deg);
+}
+/* Stats */
+.stats {
+  padding-top: 100px;
+}
+.stats-heading {
+  max-width: 500px;
+  margin: auto;
+}
+.stats .grid h3 {
+  font-size: 35px;
+}
+.stats .grid p {
+  font-size: 20px;
+  font-weight: bold;
 }
