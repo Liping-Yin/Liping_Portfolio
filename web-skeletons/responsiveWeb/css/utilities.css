@@ -41,15 +41,15 @@
   background-color: var(--secondary-color);
   color: #fff;
 }
-.bg-dark,
-.btn-dark {
-  background-color: var(--dark-color);
-  color: #fff;
-}
 .bg-light,
 .btn-light {
   background-color: var(--light-color);
   color: #333;
+}
+.bg-dark,
+.btn-dark {
+  background-color: var(--dark-color);
+  color: #fff;
 }
 
 .bg-primary a,
@@ -61,6 +61,20 @@
 .bg-light a,
 .btn-light a {
   color: white;
+}
+
+/* Text colors */
+.text-primary {
+  color: var(--primary-color);
+}
+.text-secondary {
+  color: var(--secondary-color);
+}
+.text-dark {
+  color: var(--dark-color);
+}
+.text-light {
+  color: var(--light-color);
 }
 
 /* Text sizes */
@@ -84,6 +98,26 @@
   text-align: center;
 }
 
+/* Alert */
+.alert {
+  background-color: var(--light-color);
+  padding: 10px 20px;
+  margin: 15px 0;
+  font-weight: bold;
+}
+.alert i {
+  margin-right: 10px;
+}
+.alert-success {
+  background-color: var(--success-color);
+  color: #fff;
+}
+.alert-error {
+  background-color: var(--error-color);
+  color: #fff;
+}
+
+/* Layout */
 .flex {
   display: flex;
   justify-content: center; /* pertains the main axis/direction*/
