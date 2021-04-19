@@ -30,5 +30,5 @@ The process of build trained NIDS:<br>
   4.Machine Learning Model Build 5.Feature Importance 6.Conclusion
 ### Web Development Practice
    - Responsive Website Projects 
-     - [project-1](https://github.com/icylove12/complete-javascript-course-master)
+     - [project-1](https://gallant-kare-9fe2fd.netlify.app)
    
