@@ -2,7 +2,7 @@
 Repository containing portfolio of projects and exercises completed by me for academic, self learning, and hobby purposes. My main interets including data analysis and webdevelopment. Data analysis is presented in the form of iPython Notebooks.
 
 ## Contents
-  - [Data Analysis Practices](#Data-Analysis-Practice) | [Webdevelopment Practices](#Webdevelopment-Practice)
+  - [Data Analysis Practices](#Data-Analysis-Practice) | [Web Development Practices](#Web-Development-Practice)
   
 
 ### Data Analysis Practice
@@ -29,5 +29,6 @@ The process of build trained NIDS:<br>
   3.Feature Engineeing <br>
   4.Machine Learning Model Build 5.Feature Importance 6.Conclusion
 ### Web Development Practice
-   - My extra study about [web development](https://github.com/icylove12/complete-javascript-course-master)
+   - Responsive Website Projects 
+     - [project-1](https://gallant-kare-9fe2fd.netlify.app)
    
