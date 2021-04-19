@@ -46,7 +46,13 @@
         <!--card-->
         <div class="showcase-form card">
           <h2>Request a Demo</h2>
-          <form>
+          <!-- deploy in Netlify -->
+          <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact">
+            <p class="hidden">
+              <label>Don't fill this out if you're human <input name="bot-field"></label>
+            </p>
+
             <div class="form-control">
               <input type="text" name="name" placeholder="Name" required />
             </div>
@@ -71,9 +77,9 @@
     <section class="stats">
       <div class="container">
         <h3 class="stats-heading text-center my-1">
-          Welcome to the best platform for building applications of all types
-          with modern architecture and scaling.
+          Welcome to the best platform for building applications of all types with modern architecture and scaling.
         </h3>
+        
         <div class="grid grid-3 text-center my-4">
           <div>
             <i class="fas fa-server fa-3x"></i>
