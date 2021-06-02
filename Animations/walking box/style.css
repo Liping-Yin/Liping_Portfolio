@@ -1,0 +1,60 @@
+body {
+  background-color: #2a8;
+}
+.container {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* anything outside this container is hidden */
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  /* background-color: red; */
+}
+.container .box {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 3px;
+  position: absolute;
+  animation: walk 0.5s cubic-bezier(0.7, 0, 0.3, 1) infinite;
+  /* keep box in the center of the container */
+  margin: auto;
+  left: -9999999px;
+  right: -9999999px;
+  top: 10px;
+}
+.container .walker,
+.container .walker:before,
+.container .walker:after {
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  position: absolute;
+  top: 62px;
+  left: 52px;
+}
+.container .walker:before {
+  content: "";
+  top: 0;
+  left: -40px;
+}
+.container .walker:after {
+  content: "";
+  top: 0;
+  left: 40px;
+}
+.container .walker {
+  animation: walkway 0.5s cubic-bezier(0.7, 0, 0.3, 1) infinite;
+}
+@keyframes walkway {
+  to {
+    transform: translate(-40px);
+  }
+}
+@keyframes walk {
+  to {
+    transform: rotate(90deg);
+  }
+}
