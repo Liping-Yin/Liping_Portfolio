@@ -1,0 +1,38 @@
+$bgClr: rgba(#0b0f27, 0.83);
+$txtClr: #fff;
+$animSpd: 750 * 1ms; //change also in js
+
+$numOfSlides: 5; //add new city in the array in JS and a new image below
+
+$bgPics: (
+  url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--1-min-min.jpg")
+    center center no-repeat,
+  url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--2-min-min.jpg")
+    center center no-repeat,
+  url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--3-min-min.jpg")
+    center center no-repeat,
+  url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--4-min-min.jpg")
+    center center no-repeat,
+  url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--5-min-min.jpg")
+    center center no-repeat
+);
+@mixin mediaMaxW($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slider {
+  position: relative;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  cursor: all-scroll;
+  user-select: none;
+}

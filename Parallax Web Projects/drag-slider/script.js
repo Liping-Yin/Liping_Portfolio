@@ -77,4 +77,28 @@ document.addEventListener("DOMContentLoaded", function (e) {
   $(".nav__slide--1").addClass("nav-active");
 
   //   Navigation
+  function bullets(dir) {
+    $(".nav__slide--" + curSlide).removeClass("nav-active");
+    $(".nav__slide--" + dir).addClass("nav-active");
+  }
+
+  function timeout() {
+    animation = false;
+  }
+
+  function pagination(direction) {
+    animation = true;
+    diff = 0;
+    slider.addClass("animation");
+    slider.css({
+      transform: "translate3d(-" + (curSlide - direction) * 100 + "%,0,0",
+    });
+    slider.find(".slide__darkbg").css({
+      transform: "translate3d(" + (curSlide - direction) * 50 + "%, 0, 0)",
+    });
+
+    slider.find(".slide__text").css({
+      transform: "translate3d(0,0,0)",
+    });
+  }
 });
