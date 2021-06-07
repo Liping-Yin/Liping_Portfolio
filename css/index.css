@@ -6,6 +6,7 @@
 
   --theme-color: #00c9c8;
   --secondary-color:#079696;
+  --special-color:#7278d09a;
   --nav-link-hover: white;
   --nav-link-hover-icon:#CF9EAC /* #dbdbdb;*/
   --nav-link-active: #555;
@@ -22,32 +23,41 @@
   font-family:var(--font-theme);
   margin: 0;
   padding: 0;
-  min-height: 0;
-  min-width: 0;
   color: white;
+  cursor:default;
 }
 body{
     background-color: var(--bg);
-    
 }
+a:hover{
+  cursor: pointer;
+}
+
 /* Navigation */
-header{
+header,section{
     height: 100%;
 }
+
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 10vh;
   padding: 20px 10px;
+  width:95%;
+  margin:auto;
 }
-.nav__links ul {
+.nav__links {
+  display: flex;
+  flex:1;
+  justify-content:space-between;
   list-style-type: none;
 }
-.nav__links ul li {
+.nav__links li {
   display: inline-block;
-  padding: 0px 20px;
+  padding: 1rem;
 }
-.nav__links ul li a {
+.nav__links li a {
   position:relative;
   text-decoration: none;
   height: 2rem;
@@ -57,7 +67,7 @@ header{
   color:var(--gray)
 }
 
-.nav__links ul li a:after{
+.nav__links li a:after{
     content:'';
     position:absolute;
     background-color:var(--theme-color);
@@ -67,13 +77,13 @@ header{
     bottom:-10px;
     transition: 0.3s;
 }
-.nav__links ul li a:hover {
+.nav__links li a:hover {
     color: var(--nav-link-hover);
   }
-.nav__links ul li a:hover:after{
+.nav__links li a:hover:after{
     width: 100%;
 }
-.nav__links ul li a svg {
+.nav__links li a svg {
   display: block;
   width: 1.2rem;
   height: 1.2rem;
@@ -82,12 +92,10 @@ header{
   top: 2px;
   transition: fill 0.4s ease-out;
 }
-.nav__links ul li a svg:hover {
+.nav__links li a svg:hover {
   fill: var(--gray);
 }
-.nav__logo {
-  cursor: pointer;
-}
+
 
 /* Home */
 .home__intro{
@@ -129,12 +137,10 @@ header{
     font-size: 2rem;
     text-align: center; 
     margin:30px 10px;
-
 } 
 .projects__container{
     display:flex;
     flex-direction:column;
-    height:100vh;
     justify-content:center;
     align-items: center;
 
@@ -160,6 +166,7 @@ header{
     top:10px;
     left:60vw;
 }
+
 /* EXPERIMENTS */
 .experiments__header{
     font-size: 2rem;
@@ -169,7 +176,6 @@ header{
 .experiments__container{
     display:flex;
     justify-content: center;
-    height:100vh;
     justify-content:center;
     align-items: center;
 }
@@ -179,4 +185,27 @@ header{
     margin:20px 10px;
     align-items: center;
     justify-content: center;
+}
+
+/* ELEMENTS */
+/* cursor */
+.cursor{
+  position:absolute;
+  width: 0.8rem;
+  height:0.8rem;
+  background:var(--theme-color);
+  border-radius: 50%;
+  transform:translate(-150%, -150%);
+  pointer-events:none;
+  transition:all 0.3s ease;
+  transition-property: background,transform;
+  transform-origin: 100% 100%;
+}
+.larger{
+  transform:scale(4);
+  background:var(--special-color);
+}
+
+.invisible{
+  display:none;
 }
