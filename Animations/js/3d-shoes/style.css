@@ -10,6 +10,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  perspective: 1000px;
 }
 /* Extra Container's purpose is for detecting animation area */
 .container {
@@ -20,6 +21,7 @@ body {
 }
 /* for real card container */
 .card {
+  transform-style: preserve-3d;
   border-radius: 30px;
   min-height: 80vh;
   width: 35rem;
@@ -35,6 +37,7 @@ body {
 .sneaker img {
   width: 20rem;
   z-index: 2;
+  transition: all 0.75s ease-out;
 }
 
 .circle {
@@ -51,17 +54,20 @@ body {
 }
 .info h1 {
   font-size: 3rem;
+  transition: all 0.75s ease-out;
 }
-.info h3 {
+.description {
   font-size: 1.3rem;
   padding: 2rem 0rem;
   color: #585858;
   font-weight: lighter;
+  transition: all 0.75s ease-out;
 }
 
 .sizes {
   display: flex;
   justify-content: space-between;
+  transition: all 0.75s ease-out;
 }
 .sizes button {
   padding: 0.5rem 2rem;
@@ -89,4 +95,5 @@ button.active {
   cursor: pointer;
   border-radius: 30px;
   font-weight: bolder;
+  transition: all 0.75s ease-out;
 }
