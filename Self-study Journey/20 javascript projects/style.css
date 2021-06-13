@@ -1,0 +1,51 @@
+* {
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+/* Header */
+.header {
+  display: flex;
+  margin: 20px 30px;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: turquoise;
+}
+h1 span {
+  color: black;
+  display: block;
+}
+
+/* Project */
+.projects {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.project__title {
+  font-size: 2rem;
+}
+.project__description {
+  font-size: 1.5rem;
+}
+.project__showcase {
+  width: 600px;
+  height: 338px;
+  background-color: aquamarine;
+}
+/* make it  responsive */
