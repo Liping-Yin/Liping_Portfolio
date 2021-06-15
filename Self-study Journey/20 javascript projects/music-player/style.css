@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(
+    0deg,
+    rgba(247, 247, 247, 1) 23.8%,
+    rgba(252, 221, 221, 1) 92%
+  );
+  font-family: "Lato", sans-serif;
+  margin: 0;
+}
+
+/* music container */
+.music-container {
+  display: flex;
+  box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
+  background-color: #fff;
+  position: relative;
+  border-radius: 15px;
+  padding: 20px 30px;
+  margin: 100px 0;
+  z-index: 10;
+}
+.img-container {
+  position: relative;
+  width: 110px;
+}
+.img-container::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  left: 45px;
+  bottom: 100%;
+  /* transform: translate(-50%, 50%); */
+}
+.img-container img {
+  height: 110px;
+  width: inherit;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  animation: rotate 3s linear infinite;
+  animation-play-state: paused;
+}
+/* JS change */
+.music-container.play .img-container img {
+  animation-play-state: running;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* music info */
+.music-info {
+  background-color: rgba(225, 225, 225, 0.5);
+  width: calc(100%-40px);
+  padding: 10px 10px 10px 150px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  border-radius: 15px 15px 0 0;
+  transform: translateY(0%);
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  z-index: 0;
+}
+
+/* JS change */
+.music-container.play .music-info {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+
+.music-info h4 {
+  margin: 0;
+}
+
+.progress-container {
+  background-color: #fff;
+  margin: 10px 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.progress {
+  background-color: #fe8daa;
+  height: 100%;
+  width: 0; /*JS change*/
+  border-radius: 5px;
+  transition: width 0.1s linear;
+}
+
+/* navigation */
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.action-btn {
+  background-color: #fff;
+  border: none;
+  color: #dfdbdf;
+  font-size: 20px;
+  padding: 10px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.action-btn.action-btn--big {
+  color: #cdc2d0;
+  font-size: 30px;
+}
+.action-btn:focus {
+  outline: 0;
+}
