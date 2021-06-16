@@ -38,9 +38,9 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  left: 45px;
+  left: 50%;
   bottom: 100%;
-  /* transform: translate(-50%, 50%); */
+  transform: translate(-50%);
 }
 .img-container img {
   height: 110px;
