@@ -1,3 +1,4 @@
+"use strict";
 /**  ----- set up the environment--------*/
 
 // all the roads in Meadowfield
@@ -58,6 +59,8 @@ class VillageState {
     if (!roadGraph[this.place].includes(destination)) {
       return this;
     } else {
+      // .map() takes care of the moving
+      // .filter() takes care of delivering
       let parcels = this.parcels
         .map((p) => {
           if (p.place != this.place) return p;
@@ -68,3 +71,35 @@ class VillageState {
     }
   }
 }
+/**in the class VillageState,
+ * Parcel objects aren’t changed when they are moved but re-created. The move method gives us a new village state but leaves the old one entirely intact. */
+
+// Tip: Persistent Data: immutable ----- complexity management
+// the Object.freeze method, but becareful to use it to crete immutable value
+let object = Object.freeze({ value: 5 });
+object.value = 10;
+console.log(object.value); //5;
+
+// Simulation
+/**
+ *A delivery robot looks at the world and decides in which direction it wants to move. As such, we could say that a robot is a function that takes a VillageState object and returns the name of a nearby place.
+
+ Because we want robots to be able to remember things, so that they can make and execute plans, we also pass them their memory and allow them to return a new memory. Thus, the thing a robot returns is an object containing both the direction it wants to move in and a memory value that will be given back to it the next time it is called.
+ */
+
+function runRobot(state, robot, memory) {
+  for (let turn = 0; ; turn++) {
+    if (state.parcels.length == 0) {
+      console.log(`Done in ${turn} turns`);
+      break;
+    }
+    let action = robot(state, memory);
+    state = state.move(action.direction);
+    memory = action.memory;
+    console.log(`Moved to ${action.direction}`);
+  }
+}
+
+/**Consider what a robot has to do to “solve” a given state. It must pick up all parcels by visiting every location that has a parcel and deliver them by visiting every location that a parcel is addressed to, but only after picking up the parcel.
+ * what is the strategy ??
+ */
