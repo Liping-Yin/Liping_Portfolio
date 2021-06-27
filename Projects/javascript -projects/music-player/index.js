@@ -1,3 +1,4 @@
+"use strict";
 const musicContainer = document.getElementById("musicContainer");
 // get navigation related elements
 const prevBtn = document.getElementById("prev");
@@ -5,7 +6,7 @@ const playBtn = document.getElementById("play");
 const nextBtn = document.getElementById("next");
 
 const audio = document.getElementById("audio");
-const conver = document.getElementById("cover");
+const cover = document.getElementById("cover");
 
 // ???
 // 1.difference between querySelector and getElementById in this case
@@ -14,7 +15,7 @@ const currTime = document.querySelector("#currTime");
 const durTime = document.querySelector("#durTime");
 
 // get info related elements
-const title = document.getElementById("tite");
+const title = document.getElementById("title");
 const progressContainer = document.getElementById("progressContainer");
 const progress = document.getElementById("progress");
 
@@ -30,7 +31,7 @@ loadSong(songs[songIndex]);
 function loadSong(song) {
   title.innerText = song;
   audio.src = `music/${song}.mp3`;
-  conver.src = `images/${song}.jpg`;
+  cover.src = `images/${song}.jpg`;
 }
 
 // Play Song
@@ -38,7 +39,17 @@ function playSong() {
   musicContainer.classList.add("play");
   playBtn.querySelector("i.fas").classList.remove("fa-play");
   playBtn.querySelector("i.fas").classList.add("fa-pause");
+
   audio.play();
+}
+
+//Pause song
+function pauseSong() {
+  musicContainer.classList.remove("play");
+  playBtn.querySelector("i.fas").classList.add("fa-play");
+  playBtn.querySelector("i.fas").classList.remove("fa-pause");
+
+  audio.pause();
 }
 
 // Play previous song
@@ -60,9 +71,11 @@ function nextSong() {
   loadSong(songs[songIndex]);
   playSong();
 }
+
 // Update progress bar
 function updateProgress(e) {
-  const { duration, currentTime } = e.srcElement;
+  console.log(e);
+  const { duration, currentTime } = e.target;
   const progressPercent = (currentTime / duration) * 100;
   progress.style.width = `${progressPercent}%`;
 }
@@ -80,7 +93,7 @@ function setProgress(e) {
 // ??? when to use var,let,const
 
 function DurTime(e) {
-  const { duration, currentTime } = e.srcElement;
+  const { duration, currentTime } = e.target;
 
   var sec;
   var sec_d;
@@ -131,7 +144,7 @@ function DurTime(e) {
   durTime.innerHTML = minute_d + ":" + sec_d;
 }
 // Event listeners
-playBtn.addListener("click", () => {
+playBtn.addEventListener("click", () => {
   const isPlaying = musicContainer.classList.contains("play");
   if (isPlaying) {
     pauseSong();
