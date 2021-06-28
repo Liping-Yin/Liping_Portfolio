@@ -4,13 +4,16 @@
 
 :root {
 
-  --theme-color: #00c9c8;
+  /* --theme-color: #00c9c8; */
+  --theme-color: #08fdd8;
   --secondary-color:#079696;
   --special-color:#7278d09a;
+  --btn-mask-color:#ff0b56;
   --nav-link-hover: white;
   --nav-link-hover-icon:#CF9EAC /* #dbdbdb;*/
   --nav-link-active: #555;
   --bg: #02021e;
+  /* --bg: #140f30;  */
   --bg-rgb: 14, 18, 18;
   --bgLight: radial-gradient(var(--bg), transparent, var(--theme-color) 130%);
   --gray: grey;
@@ -18,7 +21,7 @@
   --font-special:'Playfair Display', serif;
   
 }
-* {
+*,*::after,*::before {
   box-sizing: border-box;
   font-family:var(--font-theme);
   margin: 0;
@@ -102,35 +105,86 @@ header,section{
     padding:20vh 30vh;
 }
 .home__intro h1{
-    padding:2rem 0px;
-    font-weight: normal;
-    font-size:1.5rem;
-    font-family: var(--font-special);
+  font-size: 4rem;
 }
 .home__intro h1 span{
-    font-weight:bold;
-    font-size: 4rem;
-    display:block;
+  display:block;
+  padding:2rem 0px;
+  font-weight: normal;
+  font-size:1.5rem;
+  font-weight:bold;
+  font-family: var(--font-special);
 }
 
+
 /* Button */
-.button--home{
+
+.button {
     display:block;
+    position:relative;
     width:10rem;
     height:3rem;
-    text-decoration: none;
-    text-align: center;
-    font: size 0.875em;
-    letter-spacing:3px;
-    padding:12px 20px;
     background:linear-gradient(270deg,var(--theme-color),var(--secondary-color));
     transition: all 0.3s;
     cursor: pointer;
-    z-index:10;
+    /* z-index:10; */
 }
-.button--home:hover{
-    border:1px solid white;
+.button__text{
+  display:inline-block;
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.875em;
+  letter-spacing:3px;
+  padding:12px 20px;
+  /* z-index:2; */
 }
+
+.button__icon {
+  position:absolute;
+  top:0%;
+  left:90%;
+  height:100%;
+  /* z-index: 3; */
+}
+.button__icon svg{
+  fill:white;
+  height:100%;
+
+}
+.button__mask{
+  overflow: hidden;
+  position:absolute;
+  height: 100%;
+  width:100%;
+  top:0;
+  left:0;
+  cursor:pointer;
+}
+.button__mask::before{
+  content: '';
+  display:inline-block;
+  position: absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:-100%;
+  background-color: var(--btn-mask-color);
+  transition:transform .6s cubic-bezier(.694,.048,.335,1) .05s;
+  /* z-index:1; */
+}
+.button__mask:hover::before{
+  transform: translateX(200%);
+  }
+.button:hover .button__icon{
+  transform: translateX(30%);
+}
+
+
  
 /* PROJECTS */
 .projects__header{
