@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>canalstreet Clone</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <a href="https://canalstreet.market/community/"
+      >clone canalstreet, use react</a
+    >
+    <div class="group" id="container">
+      <div class="loader"></div>
+      <div id="header"></div>
+      <div class="mobile-nav-toggle mobile-only js-mobile-nav-toggle"></div>
+      <div class="mobile-nav js-mobile-nav"></div>
+      <div id="main" data-router-wrapper>
+        <div
+          id="view-community"
+          data-left="180"
+          data-router-view="community"
+          data-transition-in="mobile"
+          style="opacity: 1"
+        >
+          <div class="single single--community">
+            <div class="single-hero">
+              <p class="single-hero__info"></p>
+              <div class="single-hero__columns">
+                <div class="single-hero__left"></div>
+                <div class="single-hero__right"></div>
+              </div>
+            </div>
+            <div class="single-events"></div>
+            <div class="single-features"></div>
+            <div class="single-radio"></div>
+          </div>
+          <footer id="footer" class="group">
+            <section class="footer"></section>
+            <section class="footer-legal">
+              <div class="footer-legal__left">
+                <p>Copyright Canal Street Market</p>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="">Vendor Login</a>
+              </div>
+              <a href="">Zero</a>
+            </section>
+            <section class="footer-legal-mobile mobile-only">
+              <div class="footer-legal-mobile__row">
+                <a href="/privacy-policy">Privacy Policy</a
+                ><a href="https://canal-street-dashboard.herokuapp.com/login"
+                  >Vendor Login</a
+                >
+              </div>
+              <div class="footer-legal-mobile__row">
+                <a class="zero">"site by " <span>Zero</span></a>
+                <p>Copyright Canal Street Market 2019</p>
+              </div>
+            </section>
+          </footer>
+        </div>
+      </div>
+      <div id="global" class="group"></div>
+      <!-- original footer location -->
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,3 +1,4 @@
+"use strict";
 // gsap.registerPlugin(ScrollTrigger);
 let speed = 100;
 

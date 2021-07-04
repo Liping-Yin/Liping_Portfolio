@@ -1,0 +1,30 @@
+:root {
+  /* COLOUR */
+  /* additional color */
+  --color1: #fff;
+  --color2: rgb(94, 163, 236);
+  --color3: rgb(246, 68, 68);
+  --color4: rgb(255, 180, 0);
+}
+
+.invisible {
+  visibility: hidden;
+}
+/* js change bg-color */
+#container {
+  background-color: var(--color1);
+}
+.loader {
+  visibility: hidden;
+  opacity: 0;
+  transform: translate3d(0, 0, 0);
+}
+/*  js change*/
+.mobile-nav-toggle {
+  visibility: hidden;
+}
+/*  js change*/
+.mobile-nav {
+  visibility: hidden;
+  opacity: 0;
+}
