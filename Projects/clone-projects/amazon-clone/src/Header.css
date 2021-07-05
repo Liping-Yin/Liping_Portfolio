@@ -4,7 +4,7 @@
   top: 0;
   height: 60px;
   align-items: center;
-  background-color: #131921;
+  background-color: #131a22;
   z-index: 100;
 }
 .header__logo {
@@ -27,7 +27,7 @@
 .header__search-icon {
   padding: 5px;
   height: 22px !important;
-  background-color: antiquewhite;
+  background-color: #ff9900;
 }
 .header__nav {
   display: flex;
@@ -46,4 +46,13 @@
 .header__item-2 {
   font-size: 13px;
   font-weight: 800;
+}
+.header__item-shoppingBasket {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.header__basketCount {
+  margin-left: 10px;
+  margin-right: 10px;
 }
