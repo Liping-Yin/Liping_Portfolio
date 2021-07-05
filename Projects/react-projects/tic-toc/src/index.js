@@ -44,8 +44,9 @@ class Board extends Component {
     if (winner) {
       status = "winner: " + winner;
     } else {
-      status = "Next player: " + this.state.xIsNext ? "X" : "O";
+      status = "Next Player: " + (this.state.xIsNext ? "X" : "O"); // here () can't be omitted, result will be weird, precedence.
     }
+    console.log(status);
 
     return (
       <div>
