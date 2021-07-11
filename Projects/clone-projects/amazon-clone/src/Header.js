@@ -9,11 +9,13 @@ function Header() {
   return (
     <div className="header">
       <Link to="/">
-        <img
-          className="header__logo"
-          alt="company logo"
-          src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
-        ></img>
+        <Link to="/">
+          <img
+            className="header__logo"
+            alt="company logo"
+            src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
+          ></img>
+        </Link>
       </Link>
 
       <div className="header__search">
@@ -25,10 +27,13 @@ function Header() {
         <SearchIcon className="header__search-icon" />
       </div>
       <div className="header__nav">
-        <div className="header__item">
-          <span className="header__item-1">Hello Liping</span>
-          <span className="header__item-2">Sign In</span>
-        </div>
+        <Link to="/login">
+          <div className="header__item">
+            <span className="header__item-1">Hello Liping</span>
+            <span className="header__item-2">Sign In</span>
+          </div>
+        </Link>
+
         <div className="header__item">
           <span className="header__item-1">Return</span>
           <span className="header__item-2">&Orders</span>
