@@ -7,9 +7,11 @@
 .checkout-left {
   flex: 2 1 0;
   background-color: yellow;
+  margin: 10px;
 }
 .checkout-right {
   flex: 1 1 0;
+  margin: 10px;
 }
 .checkout__title {
   margin-right: 10px;
