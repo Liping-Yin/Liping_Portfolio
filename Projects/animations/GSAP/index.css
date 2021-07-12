@@ -48,3 +48,17 @@ h2 {
 .box--e {
   background-color: cadetblue;
 }
+
+/* timeline */
+.timeline {
+  flex-direction: row;
+}
+.box--t1 {
+  background-color: brown;
+}
+.box--t2 {
+  background-color: coral;
+}
+.box--t3 {
+  background-color: deeppink;
+}

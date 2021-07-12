@@ -81,4 +81,66 @@ function showMessage(message) {
   output.innerHTML += message + "</br>";
 }
 
+// .............. Timelines.............................
+// timeline is a container for tweens where you place it in time(like schedule)
+
+// create a timeline instance
+const tl = gsap.timeline();
+
+// the following two lines do the same thing
+const tween_1 = gsap.to(".box--b", { duration: 3, scale: 0.6 });
+tl.add(tween_1);
+tl.to(".box--b", { duration: 3, scale: 0.6 }); //shorter syntax
+
+const animationSuccession = gsap.timeline({
+  repeat: 30,
+  repeatDelay: 1,
+  defaults: { duration: 1 },
+});
+
+// method chaining
+//position parameter !!!
+animationSuccession
+  .to(".box--t1", { scale: 0.5 })
+  .to(".box--t2", { duration: 2, scale: 0.5 })
+  .to(".box--t3", { scale: 0.5 }, "<3");
+
+// timeline control: similar as Tweens control
+
+// Timeline special properties
+
+// repeat
+// repeatDelay
+// yoyo
+// delay
+// onComplete
+
+// getters and setters
+
+console.log(tween_1.duration());
+tween_1.duration(1); //sets the duration to 2 seconds
+console.log(animationSuccession.duration());
+
 //............... Controll Animations...................
+
+// CONTROL TWEENS
+
+// create reference to tween (animation)
+let tween = gsap.to(".box--a", { duration: 1, x: 100 });
+// pause
+tween.pause();
+// play
+tween.play();
+
+// resume
+tween.resume();
+// half speed
+tween.timeScale(0.5);
+
+// CONTROL TIMELINES
+
+animationSuccession.timeScale(4);
+
+// ..... Getting current values of an element's property
+// this.targets()
+// .getProperty()
