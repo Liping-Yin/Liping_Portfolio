@@ -144,3 +144,29 @@ animationSuccession.timeScale(4);
 // ..... Getting current values of an element's property
 // this.targets()
 // .getProperty()
+
+// motion path
+// const round = document.querySelector(".box--p");
+
+gsap.set("#myRect", {
+  xPercent: -50,
+  yPercent: -50,
+  transformOrigin: "50% 50%",
+});
+gsap.to("#myRect", {
+  motionPath: {
+    path: "#myPath",
+    // align: "self",
+    autoRotate: true,
+  },
+  duration: 3,
+  ease: "power1.out",
+});
+
+gsap.to(".box--p", {
+  motion: {
+    path: "M0 100 ",
+  },
+});
+
+// MotionPathHelper.create(round);
