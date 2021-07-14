@@ -1,0 +1,18 @@
+.filterableProductTable {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.searchBar {
+  display: flex;
+}
+
+.searchBar form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
