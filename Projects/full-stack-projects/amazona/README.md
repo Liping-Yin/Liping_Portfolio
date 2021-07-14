@@ -1,23 +1,25 @@
-# Fullsatck E-commerce Website
+# Fullstack E-commerce Website
 
-## Front-end: React
+This project is a self study journey towards fullstack web development. By cloning E-commerce website like Amazon, React and Node.js is better understood.
 
-## Back-end: Node.js
+## Structure
 
-## database: MongoDB+ AWS
+- Front-end: React
+- Back-end: Node.js
+- database: MongoDB+ AWS
 
 ## Knowledge involved:
 
-### HTML5 and CSS3: Semantic Elements, CSS grid, Flexbox
+- HTML5 and CSS3: Semantic Elements, CSS grid, Flexbox
 
-### React: Components, Props, Events, Hooks, Router, Axios
+- React: Components, Props, Events, Hooks, Router, Axios
 
-### Redux: Store, Reducers, Actions
+- Redux: Store, Reducers, Actions
 
-### Node & Express: Web API, Body Parser, File Upload, JWT
+- Node & Express: Web API, Body Parser, File Upload, JWT
 
-### MongoDB: Mongoose,Aggregation
+- MongoDB: Mongoose,Aggregation
 
-### Development: ESLint, Babel,Git,Github
+- Development: ESLint, Babel,Git,Github
 
-### Deployment: Heroku
+- Deployment: Heroku
