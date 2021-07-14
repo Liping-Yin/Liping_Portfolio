@@ -4,9 +4,9 @@ This project is a self study journey towards fullstack web development. By cloni
 
 ## Structure
 
-- Front-end: React
-- Back-end: Node.js
-- database: MongoDB+ AWS
+- Front-end: React + Javascript + HTML5 + CSS3
+- Back-end: Express + Node.js
+- database: MongoDB + AWS
 
 ## Knowledge involved:
 

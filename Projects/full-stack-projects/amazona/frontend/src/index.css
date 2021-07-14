@@ -1,7 +1,7 @@
 :root {
   --primary-color: #268caa;
   --primary-variant-color: #845ec2;
-  --primary-variant-color-d: #021164;
+  --primary-variant-color-d: #096480;
   --secondary-color: #03dac6;
   --secondary-variant-color: #018786;
   --ternary-color: #f3c5ff;
@@ -43,7 +43,7 @@ body {
 
 header {
   grid-area: header;
-  background-color: var(--primary-color);
+  background-color: var(--primary-variant-color-d);
 }
 main {
   grid-area: main;
@@ -51,7 +51,7 @@ main {
 }
 footer {
   grid-area: footer;
-  background-color: var(--primary-color);
+  background-color: var(--primary-variant-color-d);
   color: var(--on-primary);
 }
 
