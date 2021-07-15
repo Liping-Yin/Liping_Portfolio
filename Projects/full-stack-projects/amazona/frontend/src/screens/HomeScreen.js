@@ -16,7 +16,7 @@ export default function HomeScreen() {
   // get data from backend
   useEffect(() => {
     dispatch(listProducts());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div>
