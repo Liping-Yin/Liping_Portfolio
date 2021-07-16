@@ -78,17 +78,30 @@ ul {
 li {
   margin-top: 1rem;
 }
+input,
+select,
+textarea,
 button {
   padding: 1rem;
   border-radius: 0.5rem;
   border: 0.1rem solid var(--secondary-variant-color);
   color: var(--on-secondary);
-  background-color: var(--secondary-color);
   font-size: 1.6rem;
   font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  background-color: var(--secondary-color);
   cursor: pointer;
+}
+input:hover,
+select:hover,
+textarea:hover,
+button:hover {
+  background-color: var(--primary-variant-color);
+  border: 0.1rem solid var(--primary-variant-color);
 }
 button.primary {
   background-color: var(--primary-color);
@@ -97,18 +110,24 @@ button.primary {
 button.block {
   width: 100%;
 }
-button:hover {
-  background-color: var(--primary-variant-color);
-  border: 0.1rem solid var(--primary-variant-color);
-}
+
 /* Header */
 header a {
   color: var(--on-primary);
+  padding: 1rem;
 }
 a.brand {
   color: var(--on-primary);
   font-size: 3rem;
   font-weight: bold;
+}
+.badge {
+  color: var(--on-secondary);
+  background-color: var(--primary-variant-color);
+  border-radius: 50%;
+  padding: 0.2rem 0.7rem;
+  font-size: 1.4rem;
+  margin-left: 0.2rem;
 }
 .row {
   display: flex;
