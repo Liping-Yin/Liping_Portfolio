@@ -1,32 +1,37 @@
 import express from "express";
-import data from "./data.js"; // notice the .js
 import mongoose from "mongoose";
 import userRouter from "./routers/userRouter.js";
+import productRouter from "./routers/productRouter.js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
+app.use(express.json()); // middleware that parse json data in the body of request
+app.use(express.urlencoded({ extended: true }));
 mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/amazona", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
 });
 
-app.get("/api/products/:id", (req, res) => {
-  const product = data.products.find((x) => x._id === req.params.id);
+// app.get("/api/products/:id", (req, res) => {
+//   const product = data.products.find((x) => x._id === req.params.id);
 
-  if (product) {
-    res.send(product);
-  } else {
-    res.status(404).send({ message: "product not found" });
-  }
-});
+//   if (product) {
+//     res.send(product);
+//   } else {
+//     res.status(404).send({ message: "product not found" });
+//   }
+// });
 
 // APIs
-app.get("/api/products", (req, res) => {
-  res.send(data.products);
-});
+// app.get("/api/products", (req, res) => {
+//   res.send(data.products);
+// });
 
 app.use("/api/users", userRouter);
-
+app.use("/api/products", productRouter);
 // set root
 app.get("/", (req, res) => {
   res.send("Server is ready");
