@@ -35,6 +35,7 @@ export const signin = (email, password) => async (dispatch) => {
 export const signout = () => (dispatch) => {
   localStorage.removeItem("userInfo");
   localStorage.removeItem("cartItem");
+  localStorage.removeItem("shippingAddress");
   dispatch({ type: USER_SIGNOUT });
 };
 
@@ -44,7 +45,11 @@ export const register = (name, email, password) => async (dispatch) => {
     payload: { email, password },
   });
   try {
-    const { data } = await Axios.post("/api/users/register", { name,email, password });
+    const { data } = await Axios.post("/api/users/register", {
+      name,
+      email,
+      password,
+    });
     dispatch({
       type: USER_REGISTER_SUCCESS,
       payload: data,

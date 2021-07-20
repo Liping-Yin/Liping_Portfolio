@@ -239,7 +239,7 @@ img.large {
   margin: 1rem;
 }
 .form label {
-  display: block;
+  /* display: block; */
   margin: 1rem 0;
 }
 /* dropdown */
