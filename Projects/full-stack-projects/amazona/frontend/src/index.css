@@ -1,15 +1,16 @@
 :root {
-  --primary-color: #268caa;
-  --primary-variant-color: #845ec2;
-  --primary-variant-color-d: #096480;
-  --secondary-color: #03dac6;
-  --secondary-variant-color: #018786;
-  --ternary-color: #f3c5ff;
-  --bg-light: #fff;
+  --primary-color: #45a29e;
+  --primary-variant-color: #66fcf1;
+  --primary-variant-color-d: #006e6b;
+  --primary-variant-color-l: #8293c6;
+  --secondary-color: #fc4445;
+  --secondary-variant-color: #f6ada3;
+  --bg-dark: #0b0c10;
+  --bg-light: #1f2833;
   --surface: #fff;
-  --gray: #c0c0c0;
-  --danger: #a02020;
-  --success: #20a020;
+  --gray: #c5c6c7;
+  --danger: #ffe5dd;
+  --success: #5c9a00;
 
   /* on colors: text, iconography, strokes */
   --on-primary: #fff;
@@ -66,6 +67,7 @@ h2 {
 }
 a {
   text-decoration: none;
+  color: var(--primary-variant-color-d);
 }
 a:hover {
   color: var(--primary-variant-color);
@@ -84,7 +86,7 @@ textarea,
 button {
   padding: 1rem;
   border-radius: 0.5rem;
-  border: 0.1rem solid var(--secondary-variant-color);
+  border: 0.1rem solid var(--primary-variant-color);
   color: var(--on-secondary);
   font-size: 1.6rem;
   font-family: Helvetica, Arial, sans-serif;
@@ -93,20 +95,22 @@ button {
 }
 
 button {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   cursor: pointer;
+}
+button.primary {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-variant-color);
+  color: var(--on-primary);
 }
 input:hover,
 select:hover,
 textarea:hover,
 button:hover {
-  background-color: var(--primary-variant-color);
+  background-color: var(--primary-variant-color-l);
   border: 0.1rem solid var(--primary-variant-color);
 }
-button.primary {
-  background-color: var(--primary-color);
-  color: var(--on-primary);
-}
+
 button.block {
   width: 100%;
 }
@@ -174,6 +178,7 @@ img.large {
   border: 0.1rem solid var(--gray);
   border-radius: 0.5rem;
   background-color: var(--surface);
+  box-shadow: 0 0 0.2rem var(--primary-variant-color-l);
   margin: 1rem;
 }
 
@@ -250,9 +255,22 @@ img.large {
   padding: 1rem;
   margin-top: 0.4rem;
   border-radius: 0.5rem;
-  background-color: var(--primary-variant-color);
+  background-color: var(--primary-variant-color-l);
   z-index: 1;
 }
 .dropdown:hover .dropdown-content {
   display: block;
+}
+/* checkout steops */
+.checkout-steps > div {
+  border-top: 0.3rem solid var(--secondary-variant-color);
+  color: var(--on-secondary);
+  flex: 1;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.checkout-steps > div.active {
+  border-top-color: var(--secondary-color);
+  color: var(--secondary-color);
 }
