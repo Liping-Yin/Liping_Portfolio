@@ -217,11 +217,11 @@ img.large {
 }
 .alert-info {
   color: var(--on-secondary);
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-variant-color);
 }
 .alert-danger {
-  color: var(--on-primary);
-  background-color: var(--danger);
+  color: var(--on-secondary);
+  background-color: var(--secondary-variant-color);
 }
 .alert-success {
   color: var(--on-secondary);

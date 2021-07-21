@@ -9,7 +9,10 @@ import {
   userRegisterReducer,
   userSigninReducer,
 } from "./reducers/userReducers";
-
+import {
+  orderCreateReducer,
+  orderDetailsReducer,
+} from "./reducers/orderReducers";
 const initialState = {
   userSignin: {
     userInfo: localStorage.getItem("userInfo")
@@ -35,6 +38,8 @@ const reducer = combineReducers({
   cart: cartReducer,
   userSignin: userSigninReducer,
   userRegister: userRegisterReducer,
+  orderCreate: orderCreateReducer,
+  orderDetails: orderDetailsReducer,
 });
 // this will enable bowser developer tools check states in redux
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
