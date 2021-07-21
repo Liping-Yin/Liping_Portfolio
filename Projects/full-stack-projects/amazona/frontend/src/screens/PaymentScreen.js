@@ -31,7 +31,7 @@ export default function PaymentScreen(props) {
               aria-label="payment"
               type="radio"
               id="paypal"
-              value="paypal"
+              value="Paypal"
               name="paymentMethod"
               required
               checked

@@ -20,10 +20,9 @@ export const createOrder = (order) => async (dispatch, getState) => {
     } = getState(); // destructure get userInfo
     const { data } = await Axios.post("/api/orders", order, {
       headers: {
-        authorization: `Bearer ${userInfo.token}`,
+        Authorization: `Bearer ${userInfo.token}`,
       },
     });
-    // console.log("post order", data);
 
     dispatch({ type: ORDER_CREATE_SUCCESS, payload: data.order });
     dispatch({ type: CART_EMPTY });
@@ -52,9 +51,9 @@ export const detailsOrder = (orderId) => async (dispatch, getState) => {
 
   try {
     const { data } = await Axios.get(`/api/orders/${orderId}`, {
-      headers: { authorization: `Bearer ${userInfo.token}` },
+      headers: { Authorization: `Bearer ${userInfo.token}` },
     });
-    console.log(data);
+
     dispatch({ type: ORDER_DETAILS_SUCCESS, payload: data });
   } catch (error) {
     const message =
