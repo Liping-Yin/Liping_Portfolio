@@ -96,13 +96,10 @@ button {
 
 button {
   background-color: var(--primary-color);
+
   cursor: pointer;
 }
-button.primary {
-  background-color: var(--secondary-color);
-  border-color: var(--secondary-variant-color);
-  color: var(--on-primary);
-}
+
 input:hover,
 select:hover,
 textarea:hover,
@@ -110,11 +107,17 @@ button:hover {
   background-color: var(--primary-variant-color-l);
   border: 0.1rem solid var(--primary-variant-color);
 }
-
+button.primary {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-variant-color);
+  color: var(--on-primary);
+}
 button.block {
   width: 100%;
 }
-
+button.small {
+  font-size: 1.2rem;
+}
 /* Header */
 header a {
   color: var(--on-primary);
@@ -147,12 +150,18 @@ a.brand {
 .row.top {
   align-items: flex-start;
 }
+.row.start {
+  justify-content: flex-start;
+}
 
 .col-1 {
   flex: 1 1 25rem;
 }
 .col-2 {
   flex: 2 1 50rem;
+}
+.col-3 {
+  flex: 3 1 75rem;
 }
 .min-30 {
   min-width: 30rem;
@@ -255,7 +264,7 @@ img.large {
   padding: 1rem;
   margin-top: 0.4rem;
   border-radius: 0.5rem;
-  background-color: var(--primary-variant-color-l);
+  background-color: var(--primary-variant-color-d);
   z-index: 1;
 }
 .dropdown:hover .dropdown-content {
@@ -273,4 +282,23 @@ img.large {
 .checkout-steps > div.active {
   border-top-color: var(--secondary-color);
   color: var(--secondary-color);
+}
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table tbody tr:nth-child(odd) {
+  /* background-color: var(--primary-variant-color-l); */
+  border-left: 0.5rem solid var(--primary-variant-color);
+  border-left-style: inset;
+}
+.table td,
+table th {
+  text-align: left;
+  border: 0.15rem solid var(--gray);
+  padding: 0.5rem;
+}
+table button {
+  margin: 0 0.5rem;
 }

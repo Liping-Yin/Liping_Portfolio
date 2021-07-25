@@ -88,16 +88,21 @@ export default function CartScreen(props) {
                 {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
               </h2>
             </li>
-            <li>
-              <button
-                className="primary block"
-                type="button"
-                onClick={checkOutHandler}
-                disabled={cartItems.length === 0}
-              >
-                Proceed to checkout
-              </button>
-            </li>
+
+            {cartItems.length ? (
+              <li>
+                <button
+                  className="primary block"
+                  type="button"
+                  onClick={checkOutHandler}
+                  disabled={cartItems.length === 0}
+                >
+                  Proceed to checkout
+                </button>
+              </li>
+            ) : (
+              <li></li>
+            )}
           </ul>
         </div>
       </div>

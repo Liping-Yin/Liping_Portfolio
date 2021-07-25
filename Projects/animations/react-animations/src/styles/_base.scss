@@ -1,0 +1,85 @@
+// Color palatte
+$border-radius-s: 0.25rem;
+$border-radius-m: 0.5rem;
+$border-radius-l: 50%;
+$box-shadow-s: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+$box-shadow-l: 0 1rem 3rem rgba(0, 0, 0, 0.15);
+
+$pallete-keys: "base" !default;
+
+$pallete: (
+  "primary": (
+    "base": #27496d,
+    "light": #0c7b93,
+    "dark": #142850,
+  ),
+  "accent": (
+    "base": #fcd1d1,
+    "light": #ffdad9,
+    "dark": #cca8a8,
+  ),
+  "secondary": (
+    "base": #65ccc8,
+    "light": #98fffb,
+    "dark": #2a9b97,
+  ),
+  "ternary": (
+    "base": #5927e5,
+    "one": #ff4d6d,
+    "two": #ffd60a,
+    "three": #52b788,
+    "four": #9d4edd,
+  ),
+  "foreground": (
+    "base": #fbfffe,
+    "light": #ffffff,
+    "dark": #dddddd,
+  ),
+  "background": (
+    "base": #191919,
+    "light": #333333,
+    "dark": #111111,
+    "darker": #000000,
+  ),
+  "onColor": (
+    "base": #fff,
+    "primary": #fff,
+    "secondary": #fff,
+    "background": #fff,
+    "foreground": #000,
+  ),
+);
+
+$pallete-opacity: (
+  "light": 0.8,
+  // opacity used with lighter colors
+  "dark": 0.4,
+  // opacity used with darker colors
+  // ... etc.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+);
+
+@function color($name: "primary", $variant: $pallete-keys, $opacity: 1) {
+  $color: null;
+
+  // Get the color spectrum
+  $color-spectrum: map-get($pallete, $name);
+
+  // Get the color variant
+  @if $color-spectrum {
+    $color: map-get($color-spectrum, $variant);
+  }
+
+  // Get the alpha setting
+  $alpha: if(
+    type-of($opacity) == "number",
+    $opacity,
+    map-get($pallete-opacity, $opacity)
+  );
+
+  // Set the alpha of the color
+  @if $alpha {
+    $color: rgba($color, $alpha);
+  }
+
+  @return $color;
+}

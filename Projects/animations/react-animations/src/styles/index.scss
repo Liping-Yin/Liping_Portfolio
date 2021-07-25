@@ -1,0 +1,122 @@
+@import "base";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  width: 100%;
+  height: 100vh;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 62.5%; //1 rem = 10px
+  color: color(onColor, background);
+  background-color: color(background);
+}
+.app {
+  height: 100vh;
+}
+h1 {
+  margin-top: 3rem;
+}
+.container {
+  // width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+.row {
+  flex: 1;
+  // width: 100%;
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card component */
+.card {
+  background-color: color(secondary);
+  width: calc(20rem + 5vw);
+  height: calc(20rem + 5vw); // calc won't work if there is no space
+  line-height: calc(20rem + 5vw);
+  font-size: calc(3rem + 5vw);
+  border-radius: $border-radius-s;
+}
+
+// fade in
+// .fade-in-appear {
+//   opacity: 1;
+//   background-color: color(secondary);
+// }
+// .fade-in-appear-active {
+//   opacity: 0;
+//   background-color: color(ternary);
+//   transition: opacity 1000ms, background-color 1000ms;
+// }
+
+.fade-in-enter {
+  opacity: 0;
+  transform: scale(0.1);
+}
+.fade-in-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 200ms, transform 200ms;
+}
+.fade-in-exit {
+  opacity: 1;
+}
+.fade-in-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+// Two flips
+
+.two-flips {
+  position: relative;
+}
+.card-front {
+  position: absolute;
+  top: 0;
+  background-color: color(ternary, one);
+}
+.card-front--enter {
+  transform: rotateY(0deg) rotateX(0deg);
+}
+.card-front--enter-active {
+  transform-origin: left top;
+  transform: rotateY(45deg) rotateX(90deg);
+  transition: transform 800ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.card-front--exit {
+  opacity: 1;
+}
+.card-front--exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.card-back {
+  position: absolute;
+  top: 0;
+  background-color: color(ternary, two);
+}
+.card-back--enter {
+  opacity: 0.1;
+  transform: scale(0.1);
+}
+.card-back--enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
