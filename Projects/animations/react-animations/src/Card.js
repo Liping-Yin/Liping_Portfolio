@@ -7,7 +7,6 @@ export function TwoFlips() {
 
   const handleClick = () => {
     setState({ ...state, front: false });
-    console.log(state);
   };
 
   return (

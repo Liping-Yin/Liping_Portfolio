@@ -1,0 +1,129 @@
+@import "base";
+
+$min_width: 320px;
+$max_width: 1200px;
+
+$min_font: 16px;
+$max_font: 24px;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  // text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // cursor: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: Georgia, "Times New Roman", Times, serif; // font-size: 10px; //1 rem = 10px or use 62.5%
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+.app {
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  // height: 100%;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+// Header
+
+li,
+.link {
+  all: unset;
+}
+
+.header__container {
+  grid-template-columns: 1fr 50% 1fr;
+}
+
+.header__logo__desktop {
+  width: 12.8rem;
+}
+.header__logo__mobile {
+  width: 9.6rem;
+}
+.overlays {
+  display: none;
+}
+// Menu Modal
+.menu {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  // display: none;
+  .menu__container {
+    // @media screen (min-width: $min_width) {
+    //   grid-template-columns: 1fr 2fr 1fr;
+    // }
+
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    // logo
+    .menu__logo {
+      grid-column: 1/ 3;
+      grid-row: 1/2;
+      justify-self: center;
+      img {
+        min-width: 8rem;
+        width: 8rem;
+      }
+    }
+    // navgation links
+    div {
+      justify-self: left;
+      padding-left: 2rem;
+      nav {
+        .menu__category {
+          font-size: 1.2rem;
+          text-transform: uppercase;
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          font-size: 3.2rem;
+          color: color(accent);
+          li:hover {
+            a {
+              color: color(secondary);
+            }
+          }
+        }
+      }
+    }
+
+    // social media links
+    .menu__social {
+      margin-right: 1rem;
+      justify-self: right;
+      grid-column: 2/3;
+      grid-row: 2/4;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }
+}
+.menu-open,
+.menu-close {
+  width: 2.4rem;
+  height: 2.4rem;
+  fill: none;
+}
