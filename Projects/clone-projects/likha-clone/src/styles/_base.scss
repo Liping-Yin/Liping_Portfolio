@@ -31,22 +31,29 @@ $pallete: (
     "four": #9d4edd,
   ),
   "foreground": (
-    "base": #fbfffe,
-    "light": #ffffff,
-    "dark": #dddddd,
-  ),
-  "background": (
     "base": #191919,
     "light": #333333,
     "dark": #111111,
     "darker": #000000,
   ),
+  "background": (
+    "base": #fbfffe,
+    "light": #ffffff,
+    "dark": #dddddd,
+  ),
   "onColor": (
     "base": #fff,
     "primary": #fff,
-    "secondary": #fff,
+    "secondary": #000,
     "background": #fff,
     "foreground": #000,
+    "accent": #000,
+  ),
+  "text": (
+    "base": #000,
+    "light": #efefef,
+    "mild": #b2b6b7,
+    "dark": #000,
   ),
 );
 
@@ -55,7 +62,7 @@ $pallete-opacity: (
   // opacity used with lighter colors
   "dark": 0.4,
   // opacity used with darker colors
-  // ... etc.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  // ... etc.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 );
 
 @function color($name: "primary", $variant: $pallete-keys, $opacity: 1) {

@@ -9,14 +9,19 @@ import Treatment from "./pages/Treatment";
 import About from "./pages/About";
 import Products from "./pages/Products";
 function App() {
- 
   return (
     <div className="app">
       <Header menuOpenSvg={false} mobile={false} />
       <Menu menuOpen={false} />
       <AppointmentCTA mobile={false} />
+      <Cursor
+      // mouseStates={{
+      //   hoverMenu: false,
+      //   hoverCta: false,
+      //   hoverDiscover: false,
+      // }}
+      />
       <Home />
-      <Cursor />
       <OverLaySvg
         className="overlays"
         preserveAspectRatio="none"

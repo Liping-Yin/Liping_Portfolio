@@ -5,13 +5,20 @@ import "./styles/index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import ScrollToTop from "./components/ScrollToTop";
+import { MouseContextProvider } from "./components/Cursor";
+// import {Provider} from "react-redux";
+// import store from "./store";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <ScrollToTop />
-      <App />
-    </Router>
+    {/* <Provider store={store}> */}
+    <MouseContextProvider>
+      <Router>
+        <ScrollToTop />
+        <App />
+      </Router>
+    </MouseContextProvider>
+    {/* </Provider> */}
   </React.StrictMode>,
   document.getElementById("root")
 );

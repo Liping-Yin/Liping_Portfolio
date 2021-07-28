@@ -22,11 +22,13 @@ export function Logo(props) {
 }
 
 export function MenuClose(props) {
+  // setting defualt value before destructure
+  const { fill = "#231F20", fillRule = "evenodd", ...rest } = props;
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" {...rest}>
       <path
-        fill="#231F20"
-        fillRule="evenodd"
+        fill={fill}
+        fillRule={fillRule}
         d="M4.394 17.704a1.345 1.345 0 101.902 1.902L12 13.902l5.704 5.704a1.345 1.345 0 101.902-1.901L13.901 12l5.705-5.705a1.345 1.345 0 10-1.901-1.901L12 10.099 6.295 4.394a1.345 1.345 0 00-1.901 1.902L10.098 12l-5.704 5.704z"
         clipRule="evenodd"
       ></path>
@@ -46,21 +48,52 @@ export function MenuOpen(props) {
   );
 }
 
-export function CTA(props) {
+export function CTASvg(props) {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="13"
-      fill="none"
-      viewBox="0 0 32 13"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" {...props}>
       <g clipPath="url(#fixedctaclip)">
         <path d="M16 2.868h-.302L11.018 0 0 3.774l2.717.603 6.792 8.604h12.83l6.793-8.604L32 3.774 20.83 0 16 2.868zm3.774 8.302h-7.85l3.925-3.774 3.925 3.774zm-9.812-.453L5.283 4.83l8.906 1.812-4.227 4.075zm11.774 0l-4.227-4.075 8.906-1.812-4.68 5.887zm3.622-7.396l-9.207 1.962h-.453L6.491 3.321l4.226-1.51 4.528 2.717h1.208l4.528-2.717 4.377 1.51z"></path>
       </g>
       <defs>
         <clipPath id="fixedctaclip">
           <path fill="#fff" d="M0 0H32V12.83H0z"></path>
+        </clipPath>
+      </defs>
+    </svg>
+  );
+}
+
+// confused by this svg!
+
+export function ArrowSvg(props) {
+  const {
+    width = "26",
+    fill = "none",
+    strokeWidth = "2",
+    height = "14",
+    ...rest
+  } = props;
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
+      fill={fill}
+      {...rest}
+      viewBox="0 0 26 14"
+    >
+      <g
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeMiterlimit="10"
+        strokeWidth={strokeWidth}
+        clipPath="url(#arrow)"
+      >
+        <path d="M1 6.9h24M19.1 1L25 6.9l-5.9 5.9"></path>
+      </g>
+      <defs>
+        <clipPath id="arrow">
+          <path fill="#fff" d="M0 0H26V13.8H0z"></path>
         </clipPath>
       </defs>
     </svg>

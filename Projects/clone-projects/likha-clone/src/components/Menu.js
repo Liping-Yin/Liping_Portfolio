@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaceBook, Instagram, LinkedIn } from "../assets/SocialSvg";
 import { Link } from "react-router-dom";
+import { MouseContext } from "./Cursor";
 export default function Menu(props) {
-  const { menuOpen } = props;
+  const { cursorType, cursorChangeHandler } = useContext(MouseContext);
+  const { menuOpen } = cursorType;
   return (
     <div className="menu">
       {menuOpen ? (
-        <div className="container menu__container">
+        <div className="container container--menu">
           <div className="menu__logo">
             <img
               src="https://likhaaesthetic.ie/wp-content/themes/wondr/img/logo.svg"
