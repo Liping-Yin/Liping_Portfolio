@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Logo, MenuOpen, MenuClose } from "../assets/IconsSvg";
 import { MouseContext } from "./Cursor";
 
-export default function Header(props) {
+export default function Header() {
   const { cursorType, cursorChangeHandler } = useContext(MouseContext);
   const { menuOpen } = cursorType;
   const logoVisibilityClassName =
@@ -56,7 +56,7 @@ export default function Header(props) {
             ) : (
               <MenuClose
                 onClick={() => {
-                  cursorChangeHandler({ menuOpen: false,  });
+                  cursorChangeHandler({ menuOpen: false });
                 }}
                 className="menu-close"
                 viewBox="0 0 24 24"

@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CTASvg } from "../assets/IconsSvg";
-import Cursor, { MouseContext } from "./Cursor";
+import { MouseContext } from "./Cursor";
 
 export default function AppointmentCTA(props) {
   // const { mobile } = props;
-  const { cursorType, cursorChangeHandler } = useContext(MouseContext);
+  const { cursorChangeHandler } = useContext(MouseContext);
 
   return (
     <Link

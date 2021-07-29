@@ -117,14 +117,14 @@ export function ArrowDownSvg(props) {
       <path
         d="M0.5 19.5L6.5 25.5L12.5 19.5"
         stroke="#231F20"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       ></path>
       <path
         d="M6.5 23.5V0.5"
         stroke="#231F20"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       ></path>
     </svg>
   );

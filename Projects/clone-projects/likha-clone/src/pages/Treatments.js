@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react";
 
-export default function Treatment() {
-    return (
-        <div>
-            
-        </div>
-    )
+export default function Treatments() {
+  return <div></div>;
 }

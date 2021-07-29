@@ -1,4 +1,5 @@
 @import "base";
+@import url("https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap");
 
 $min_width: 320px;
 $max_width: 1200px;
@@ -13,6 +14,7 @@ $max_font: 24px;
   // text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; //prevent horizontal scroll-bar when overflow
   cursor: none;
 }
 li,
@@ -24,7 +26,7 @@ html,
 body {
   width: 100%;
   height: 100vh;
-  font-family: Georgia, "Times New Roman", Times, serif; // font-size: 10px; //1 rem = 10px or use 62.5%
+  font-family: "Gilda Display", serif;
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
 }
 .app {
@@ -159,7 +161,7 @@ body {
 
 // Header
 .header {
-  display: box;
+  z-index: 100;
   position: fixed;
   top: 0;
   width: 100%;
@@ -191,6 +193,12 @@ body {
 // Menu Modal
 .menu {
   width: 100%;
+  position: absolute;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
 
   // logo
   .menu__logo {
@@ -273,15 +281,77 @@ body {
 
 // Pages
 .page {
-  position: absolute;
+  // position: relative;
   width: 100%;
+  min-height: 100vh;
+  z-index: -1;
 
   &.page--home {
     .home__hero {
-      // canvas
+      min-height: 100vh;
+      // position: relative;
+      background-color: color(primary, base, 0.3);
       .home__hero__tilt {
+        position: relative;
+        top: 0;
         width: 100%;
-        background-color: color(primary, base, 0.3);
+        // perspective: 1rem;
+
+        .home__hero__award {
+          position: absolute;
+          z-index: 4;
+          img {
+            width: 10rem;
+          }
+
+          &:nth-child(1) {
+            bottom: 20vh;
+            left: 5vw;
+          }
+
+          &:nth-child(2) {
+            top: 20vh;
+            right: 5vw;
+          }
+        }
+        .home__hero__image {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          .a {
+            width: 50vw;
+          }
+          img {
+            width: 35vw;
+          }
+          .canvas--blob {
+            position: absolute;
+            width: 100%;
+          }
+        }
+        .home__hero__title {
+          position: absolute;
+          pointer-events: none;
+          font-size: 4rem;
+          color: color(accent);
+          line-height: 6rem;
+          z-index: 5;
+
+          &:nth-of-type(1) {
+            top: 25%;
+            left: 2%;
+          }
+          &:nth-of-type(2) {
+            bottom: 5%;
+            right: 2%;
+          }
+        }
+      }
+      .home__hero__arrow {
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
       }
     }
   }

@@ -5,7 +5,7 @@ import OverLaySvg from "./assets/OverLaySvg";
 import Cursor from "./components/Cursor";
 import Menu from "./components/Menu";
 import AppointmentCTA from "./components/AppointmentCTA";
-import Treatments from "./pages/Treatment";
+import Treatments from "./pages/Treatments";
 import About from "./pages/About";
 import Products from "./pages/Products";
 function App() {
