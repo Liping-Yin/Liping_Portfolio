@@ -3,7 +3,7 @@ import { FaceBook, Instagram, LinkedIn } from "../assets/SocialSvg";
 import { Link } from "react-router-dom";
 import { MouseContext } from "./Cursor";
 export default function Menu(props) {
-  const { cursorType, cursorChangeHandler } = useContext(MouseContext);
+  const { cursorType } = useContext(MouseContext);
   const { menuOpen } = cursorType;
   return (
     <div className="menu">
@@ -62,7 +62,6 @@ export default function Menu(props) {
           </div>
           <div className="menu__social">
             <a href="https://www.facebook" className="menu__social__link link">
-              {""}
               <FaceBook />
             </a>
 

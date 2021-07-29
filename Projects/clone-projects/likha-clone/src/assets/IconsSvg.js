@@ -65,7 +65,7 @@ export function CTASvg(props) {
 
 // confused by this svg!
 
-export function ArrowSvg(props) {
+export function ArrowRightSvg(props) {
   const {
     width = "26",
     fill = "none",
@@ -96,6 +96,36 @@ export function ArrowSvg(props) {
           <path fill="#fff" d="M0 0H26V13.8H0z"></path>
         </clipPath>
       </defs>
+    </svg>
+  );
+}
+export function ArrowDownSvg(props) {
+  const {
+    width = "13",
+    height = "26",
+    viewBox = "0 0 13 26",
+    fill = "none",
+  } = props;
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox={viewBox}
+      fill={fill}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0.5 19.5L6.5 25.5L12.5 19.5"
+        stroke="#231F20"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>
+      <path
+        d="M6.5 23.5V0.5"
+        stroke="#231F20"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>
     </svg>
   );
 }

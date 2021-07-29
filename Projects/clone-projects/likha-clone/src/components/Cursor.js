@@ -5,7 +5,7 @@ import React, {
   useRef,
   useState,
 } from "react";
-import { ArrowSvg } from "../assets/IconsSvg";
+import { ArrowRightSvg } from "../assets/IconsSvg";
 
 export default function Cursor() {
   const cursorRef = useRef(null);
@@ -13,7 +13,7 @@ export default function Cursor() {
   const { cursorType } = useContext(MouseContext);
 
   // get cursor events from context
-  const { hoverCta, hoverDiscover, hoverMenu } = cursorType;
+  const { hoverCta, hoverDiscover, hoverMenu, menuOpen } = cursorType;
   const cursorClassName =
     "cursor " +
     (hoverCta
@@ -21,7 +21,9 @@ export default function Cursor() {
       : hoverDiscover
       ? "hoverDiscover"
       : hoverMenu
-      ? "hoverMenu"
+      ? menuOpen
+        ? "closeMenu hoverMenu"
+        : "hoverMenu"
       : "");
 
   useEffect(() => {
@@ -36,9 +38,11 @@ export default function Cursor() {
   return (
     <div ref={cursorRef} className={cursorClassName}>
       <span className="cursor__menu">menu</span>
+      <span className="cursor__menu-close">close</span>
       <span className="cursor__cta">Learn&nbsp;More</span>
       <span className="cursor__discover">Discover</span>
-      <ArrowSvg className="cursor__arrow" viewBox="0 0 13 26" />
+
+      <ArrowRightSvg className="cursor__arrow" viewBox="0 0 13 26" />
     </div>
   );
 }

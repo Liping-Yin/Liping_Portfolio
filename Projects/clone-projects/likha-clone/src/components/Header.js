@@ -56,7 +56,7 @@ export default function Header(props) {
             ) : (
               <MenuClose
                 onClick={() => {
-                  cursorChangeHandler({ menuOpen: false });
+                  cursorChangeHandler({ menuOpen: false,  });
                 }}
                 className="menu-close"
                 viewBox="0 0 24 24"

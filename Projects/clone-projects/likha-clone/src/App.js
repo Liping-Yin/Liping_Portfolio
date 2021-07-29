@@ -5,15 +5,15 @@ import OverLaySvg from "./assets/OverLaySvg";
 import Cursor from "./components/Cursor";
 import Menu from "./components/Menu";
 import AppointmentCTA from "./components/AppointmentCTA";
-import Treatment from "./pages/Treatment";
+import Treatments from "./pages/Treatment";
 import About from "./pages/About";
 import Products from "./pages/Products";
 function App() {
   return (
     <div className="app">
-      <Header menuOpenSvg={false} mobile={false} />
-      <Menu menuOpen={false} />
-      <AppointmentCTA mobile={false} />
+      <Header />
+      <Menu />
+      <AppointmentCTA />
       <Cursor
       // mouseStates={{
       //   hoverMenu: false,
@@ -37,8 +37,8 @@ function App() {
         <Route></Route>
         <Route></Route>
         <Route></Route>
-        <Route path="/treatment">
-          <Treatment />
+        <Route path="/treatments">
+          <Treatments />
         </Route>
         <Route path="/">
           <Home />
