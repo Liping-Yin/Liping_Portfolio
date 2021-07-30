@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Canvas from "./Canvas";
 import { Link } from "react-router-dom";
 import { ArrowDownSvg } from "../assets/IconsSvg";
+
 export default function HomeHero() {
+  const heroTiltRef = useRef();
+  useEffect(() => {
+    const heroTilt = heroTiltRef.current;
+    const tilt = (event) => {
+      let yAxis = (event.pageX - window.innerWidth / 2) / 25;
+      let xAxis = (event.pageY - window.innerHeight / 2) / 25;
+
+      heroTilt.style.transform = ` rotateX(${xAxis}deg) rotateY(${yAxis}deg) `;
+      // scale3d(1,1,1)
+      heroTilt.style.willChange = "transform";
+    };
+    heroTilt.addEventListener("mousemove", tilt);
+
+    return () => {
+      heroTilt.removeEventListener("mousemove", tilt);
+      heroTilt.style.willChange = "none";
+    };
+  });
+
   return (
     <div className="home__hero">
-      <div className="home__hero__tilt">
+      <div className="home__hero__tilt" ref={heroTiltRef}>
         <a
           href="/about/winner-of-aesthetic-clinic-of-the-year-2020-2021/"
           className="link home__hero__award"
@@ -33,10 +53,10 @@ export default function HomeHero() {
           <Canvas className="canvas canvas--blob" />
         </div>
         <h1 className="home__hero__title">
-          'Beauty' <br></br>'is a right'
+          Beauty <br></br>is a right
         </h1>
         <h1 className="home__hero__title">
-          "Not"<br></br>"a Privilege"
+          Not<br></br>a Privilege
         </h1>
       </div>
       <button type="button" className="home__hero__arrow link">

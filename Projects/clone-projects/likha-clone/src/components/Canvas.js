@@ -49,16 +49,16 @@ export default function Canvas(props) {
 //   return canvasRef;
 // }
 
-// export function resizeCanvasToDisplaySize(context, canvas) {
-//   const { width, height } = canvas.getBoundingClientRect();
+export function resizeCanvasToDisplaySize(context, canvas) {
+  const { width, height } = canvas.getBoundingClientRect();
 
-//   //   adjust size according to device pixel ratio
-//   if (canvas.width !== width || canvas.height !== height) {
-//     const { devicePixelRatio: ratio = 1 } = window;
-//     canvas.width = width * ratio;
-//     canvas.height = height * ratio;
-//     context.scale(ratio, ratio);
-//     return true; // or return some useful information like width and height
-//   }
-//   return false;
-// }
+  //   adjust size according to device pixel ratio
+  if (canvas.width !== width || canvas.height !== height) {
+    const { devicePixelRatio: ratio = 1 } = window;
+    canvas.width = width * ratio;
+    canvas.height = height * ratio;
+    context.scale(ratio, ratio);
+    return true; // or return some useful information like width and height
+  }
+  return false;
+}

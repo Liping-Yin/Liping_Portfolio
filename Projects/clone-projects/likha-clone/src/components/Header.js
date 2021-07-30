@@ -31,7 +31,7 @@ export default function Header() {
         <Link to="/" className={logoVisibilityClassName}>
           <Logo
             id="layer-1"
-            className="header__logo--mobile"
+            className="header__logo desktop"
             x="0"
             y="0"
             viewBox="0 0 237.8 131.7"

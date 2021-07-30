@@ -38,7 +38,8 @@ body {
   align-items: center;
   justify-items: center;
   width: 100%;
-  // height: 100%;
+  height: 100%;
+
   &.container--header {
     grid-template-columns: 1fr 50% 1fr;
   }
@@ -47,7 +48,7 @@ body {
     grid-template-rows: 1fr 3fr;
     @media screen and (min-width: $min_width) {
       grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 3fr 1fr;
+      grid-template-rows: 2fr 1fr;
     }
   }
 }
@@ -165,26 +166,30 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+  padding-top: 32px;
+  z-index: 1000;
   .header__logo {
+    max-height: 100%;
     &.hide {
       visibility: hidden;
     }
     &.show {
       visibility: visible;
     }
-    .header__logo--mobile {
-      width: 9.6rem;
+    &.mobile {
+      width: 8rem;
     }
-    .header__logo--desktop {
-      width: 12.8rem;
+    &.desktop {
+      width: 9.6rem;
     }
   }
   .header__actions {
     // Menu Icon svg
     .menu-open,
     .menu-close {
-      width: 2.4rem;
-      height: 2.4rem;
+      width: 1.2rem;
+      min-width: 24px;
+      max-width: 32px;
       fill: none;
     }
   }
@@ -193,8 +198,12 @@ body {
 // Menu Modal
 .menu {
   width: 100%;
+  min-height: 100vh;
   position: absolute;
   visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &.show {
     visibility: visible;
@@ -257,6 +266,7 @@ body {
       grid-column: 3/4;
       grid-row: 2/3;
       align-self: end;
+      justify-self: left;
     }
   }
   // social media links
@@ -267,7 +277,8 @@ body {
     justify-self: right;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    padding-right: 1rem;
+    gap: 1rem;
     @media screen and (min-width: $min_width) {
       grid-column: 3/4;
       grid-row: 1/2;
@@ -281,24 +292,33 @@ body {
 
 // Pages
 .page {
-  // position: relative;
-  width: 100%;
-  min-height: 100vh;
-  z-index: -1;
-
   &.page--home {
     .home__hero {
+      display: flex;
+      width: 100%;
       min-height: 100vh;
-      // position: relative;
-      background-color: color(primary, base, 0.3);
+
+      margin-top: 2rem;
+      overflow-y: hidden;
+      justify-content: center;
+      // background-color: orange;
       .home__hero__tilt {
+        display: flex;
         position: relative;
+        min-height: 100vh;
         top: 0;
         width: 100%;
-        // perspective: 1rem;
+        max-width: 90%;
+        perspective: 2000px;
+        // React control transform with mouse move
+        // rotateX(1deg) rotateY(1deg) scale3d(1,1,1);
+        // will-change: transform;
+        transform-style: preserve-3d;
+        transition: all 0.3s;
 
         .home__hero__award {
           position: absolute;
+
           z-index: 4;
           img {
             width: 10rem;
@@ -307,52 +327,101 @@ body {
           &:nth-child(1) {
             bottom: 20vh;
             left: 5vw;
+            transform: translateZ(-300px);
           }
 
           &:nth-child(2) {
             top: 20vh;
             right: 5vw;
+            transform: translateZ(-300px);
           }
         }
         .home__hero__image {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
+          display: grid;
+          width: 100%;
+          height: 100%;
+          justify-self: center;
+          align-self: center;
+          // center items in grid
+          justify-items: center;
+          align-items: center;
+          transform: translateZ(-600px);
+
           .a {
-            width: 50vw;
+            grid-area: 1/1;
+            position: absolute;
+            &::after {
+              content: "link";
+              width: 60vw;
+              height: 60vw;
+              border-radius: 1px solid purple;
+              background-color: purple;
+              z-index: 10;
+            }
           }
           img {
-            width: 35vw;
+            grid-area: 1/1;
+            width: 60vw;
+            z-index: 9;
           }
           .canvas--blob {
-            position: absolute;
+            grid-area: 1/1;
             width: 100%;
+            min-height: 100vh;
           }
         }
         .home__hero__title {
           position: absolute;
           pointer-events: none;
-          font-size: 4rem;
+          font-size: 6rem;
           color: color(accent);
-          line-height: 6rem;
-          z-index: 5;
+          // word-spacing: 1px;
+          line-height: 8rem;
+          padding-left: 2rem;
+          padding-right: 2rem;
+          font-weight: 400;
+
+          z-index: 20;
+          br {
+            &::before {
+              content: "";
+              display: block;
+            }
+          }
 
           &:nth-of-type(1) {
-            top: 25%;
+            top: 5%;
             left: 2%;
+            margin-top: 2rem;
+            text-align: right;
+            transform: translateZ(100px);
           }
           &:nth-of-type(2) {
             bottom: 5%;
             right: 2%;
+            text-align: left;
+            transform: translateZ(100px);
           }
         }
       }
       .home__hero__arrow {
         position: absolute;
-        right: 1rem;
-        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 25%;
+        animation: float 2s infinite alternate;
       }
     }
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+    transition-duration: 0.1s;
+  }
+  100% {
+    transform: translateY(1rem);
+    transition-duration: 0.1s;
   }
 }
