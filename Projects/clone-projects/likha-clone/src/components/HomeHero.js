@@ -7,12 +7,14 @@ export default function HomeHero() {
   const heroTiltRef = useRef();
   useEffect(() => {
     const heroTilt = heroTiltRef.current;
-    const tilt = (event) => {
-      let yAxis = (event.pageX - window.innerWidth / 2) / 25;
-      let xAxis = (event.pageY - window.innerHeight / 2) / 25;
 
-      heroTilt.style.transform = ` rotateX(${xAxis}deg) rotateY(${yAxis}deg) `;
-      // scale3d(1,1,1)
+    const tilt = (event) => {
+      let rectX = heroTilt.offsetWidth;
+      let rectY = heroTilt.offsetHeight;
+      let yAxis = (rectX / 2 - event.pageX) / 100;
+      let xAxis = (rectY / 2 - event.pageY) / 30;
+
+      heroTilt.style.transform = ` rotateX(${xAxis}deg) rotateY(${yAxis}deg) scale3d(1,1,1) `;
       heroTilt.style.willChange = "transform";
     };
     heroTilt.addEventListener("mousemove", tilt);

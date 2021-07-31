@@ -16,7 +16,8 @@ $pallete: (
   "accent": (
     "base": #fcd1d1,
     "light": #ffdad9,
-    "dark": #cca8a8,
+    "dark": #eaa098,
+    //darksalmon
   ),
   "secondary": (
     "base": #97cfcd,
@@ -62,7 +63,7 @@ $pallete-opacity: (
   // opacity used with lighter colors
   "dark": 0.4,
   // opacity used with darker colors
-  // ... etc.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  // ... etc.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 );
 
 @function color($name: "primary", $variant: $pallete-keys, $opacity: 1) {
