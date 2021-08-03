@@ -5,6 +5,7 @@ import { ArrowDownSvg } from "../assets/IconsSvg";
 
 export default function HomeHero() {
   const heroTiltRef = useRef();
+
   useEffect(() => {
     const heroTilt = heroTiltRef.current;
 
@@ -16,6 +17,9 @@ export default function HomeHero() {
 
       heroTilt.style.transform = ` rotateX(${xAxis}deg) rotateY(${yAxis}deg) scale3d(1,1,1) `;
       heroTilt.style.willChange = "transform";
+
+      heroTilt.children[3].style.transform = `translate(${yAxis}px,${xAxis}px)`;
+      heroTilt.children[4].style.transform = `translate(${yAxis}px,${xAxis}px)`;
     };
     heroTilt.addEventListener("mousemove", tilt);
 
